@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.1 - 2026-11-14
+
+### Fixes
+
+- Require internetdata v2.11.1: a 403 can mean the key lacks the ip.lookup scope ([`fea9d88`](https://github.com/internetdata/sdk-go-gin/commit/fea9d8864db5d255a26d31b63a0baae2cd02150b))
+
 ## 1.0.0 - 2026-11-14
 
 ### Features
