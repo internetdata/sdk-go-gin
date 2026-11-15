@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.2 - 2026-11-15
+
+### Features
+
+- Require internetdata v2.12.0: hosted_domains lists its 10 most popular domains ([`4fea3ca`](https://github.com/internetdata/sdk-go-gin/commit/4fea3ca47ad7ea8cfcb572f474030e1e1d788aa0))
+
 ## 1.0.1 - 2026-11-14
 
 ### Fixes
