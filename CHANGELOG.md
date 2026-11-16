@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.3 - 2026-11-16
+
+### Features
+
+- Require internetdata v2.13.0: an AS's rank, neighbors and hosted domains ([`e3579a3`](https://github.com/internetdata/sdk-go-gin/commit/e3579a38630b3c434810bb966ab64c7a34d01a95))
+
 ## 1.0.2 - 2026-11-15
 
 ### Features
