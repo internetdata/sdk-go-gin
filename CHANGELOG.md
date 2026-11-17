@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.4 - 2026-11-17
+
+### Features
+
+- Require internetdata v2.14.0: cap_reached on a paid answer past its overage cap ([`093e554`](https://github.com/internetdata/sdk-go-gin/commit/093e554a7c6351a279330547d78ff0be1069c9fc))
+
 ## 1.0.3 - 2026-11-16
 
 ### Features
