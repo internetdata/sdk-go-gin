@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/gin-gonic/gin v1.11.0
-	github.com/internetdata/sdk-go/v2 v2.14.0
+	github.com/internetdata/sdk-go/v2 v2.14.1
 )
 
 require (
