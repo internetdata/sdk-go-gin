@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.5 - 2026-11-18
+
+### Fixes
+
+- Require internetdata v2.14.1: the spec as republished ([`d6daeb3`](https://github.com/internetdata/sdk-go-gin/commit/d6daeb369005261d8102b15f6406b0cad9e0da5d))
+
 ## 1.0.4 - 2026-11-17
 
 ### Features
