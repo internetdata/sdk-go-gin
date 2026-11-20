@@ -20,7 +20,7 @@ const ContextKey = "internetdata"
 
 // Options configure the middleware. Everything is optional, though a server
 // almost certainly wants an APIKey: without one a lookup is on Unlimited, the
-// free plan, and every lookup shares the per-minute limit of the server's one
+// free plan, and every lookup shares the rate limit of the server's one
 // address.
 type Options struct {
 	middleware.Options[*gin.Context]
