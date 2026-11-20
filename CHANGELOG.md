@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.8 - 2026-11-20
+
+### Fixes
+
+- Require internetdata v2.15.0: a paid domain answer's hosting, co-hosted domains, home page, redirects and backlinks ([`d5bb29b`](https://github.com/internetdata/sdk-go-gin/commit/d5bb29b83fc4c392d2e915782cba701a7645ce64))
+
 ## 1.0.7 - 2026-11-20
 
 ### Fixes
