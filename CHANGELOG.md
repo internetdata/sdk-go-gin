@@ -2,6 +2,13 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.11 - 2026-11-22
+
+### Features
+
+- Require internetdata v2.16.0, which reads is_bot and the bot row ([`a9a48a8`](https://github.com/internetdata/sdk-go-gin/commit/a9a48a851fd9b784263ba21f23182919bad813cd))
+- README: a condition on is_bot, which works on every plan ([`b416066`](https://github.com/internetdata/sdk-go-gin/commit/b41606662974c65d0e3a956fd38c88e5a671d975))
+
 ## 1.0.10 - 2026-11-22
 
 ### Fixes
