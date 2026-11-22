@@ -599,6 +599,46 @@ func TestTheREADMEsAppLooksUpTheVisitorWithOnlyAnAPIKey(t *testing.T) {
 	}
 }
 
+// is_bot is on every plan, so the README's app blocks on it with any key: a
+// bot's address is refused before the handler, and another passes.
+func TestTheREADMEsAppBlocksOnIsBot(t *testing.T) {
+	for name, want := range map[string]int{"paid-bot": http.StatusForbidden, "unlimited-answer": http.StatusOK} {
+		t.Run(name, func(t *testing.T) {
+			api := &apiHost{body: corpusAnswer(t, name)}
+			saved := http.DefaultTransport
+			http.DefaultTransport = api
+			t.Cleanup(func() { http.DefaultTransport = saved })
+
+			engine := gin.New()
+			if err := engine.SetTrustedProxies([]string{"10.0.0.0/8"}); err != nil {
+				t.Fatalf("SetTrustedProxies: %v", err)
+			}
+			engine.Use(internetdatagin.Must(internetdatagin.Options{
+				Options: middleware.Options[*gin.Context]{
+					APIKey:         "key",
+					BlockCondition: middleware.Conditions{{"is_bot": true}},
+				},
+			}))
+			reached := false
+			engine.GET("/", func(c *gin.Context) {
+				reached = true
+				c.String(http.StatusOK, "Hello")
+			})
+
+			request := httptest.NewRequest(http.MethodGet, "/", nil)
+			request.RemoteAddr = publicIP + ":4567"
+			recorder := httptest.NewRecorder()
+			engine.ServeHTTP(recorder, request)
+			if recorder.Code != want || reached != (want == http.StatusOK) {
+				t.Errorf("status %d with the handler reached %v, want %d", recorder.Code, reached, want)
+			}
+			if got := api.last(); got.path != "/"+publicIP {
+				t.Errorf("asked %+v, want /%s", got, publicIP)
+			}
+		})
+	}
+}
+
 // The API's host, answering every lookup with body and recording what it was
 // asked. Any other host is refused, so nothing leaves the test.
 type apiHost struct {
