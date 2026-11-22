@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.10 - 2026-11-22
+
+### Fixes
+
+- Require golang.org/x/net 0.63.0 and golang.org/x/crypto 0.59.0 ([`50eaad2`](https://github.com/internetdata/sdk-go-gin/commit/50eaad2fbcd9b057efe2e626f3d9a9cce2d92e9a))
+
 ## 1.0.9 - 2026-11-20
 
 ### Fixes
