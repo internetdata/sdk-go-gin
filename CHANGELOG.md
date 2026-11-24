@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.0.14 - 2026-11-24
+
+### Features
+
+- Require internetdata v2.17.0: a condition on a list member matches any element ([`83fa3dc`](https://github.com/internetdata/sdk-go-gin/commit/83fa3dcf828d665a29352a49ad0767f042a483c6))
+
 ## 1.0.13 - 2026-11-23
 
 ### Fixes
