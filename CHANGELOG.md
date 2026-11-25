@@ -2,6 +2,13 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.1.0 - 2026-11-25
+
+### Features
+
+- Require internetdata v2.18.0: a visitor's user agent, and AllowBots in the core ([`24191f2`](https://github.com/internetdata/sdk-go-gin/commit/24191f27efd1bb1e5eb5c9d18c0c0620251c9afc))
+- AllowBots: send the visitor's user agent, and let a verified crawler through ([`5430a88`](https://github.com/internetdata/sdk-go-gin/commit/5430a88ebec05f2ee07bc3df97bc63319283afc4))
+
 ## 1.0.14 - 2026-11-24
 
 ### Features
