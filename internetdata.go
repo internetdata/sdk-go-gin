@@ -22,6 +22,10 @@ const ContextKey = "internetdata"
 // almost certainly wants an APIKey: without one a lookup is on Unlimited, the
 // free plan, and every lookup shares the rate limit of the server's one
 // address.
+//
+// AllowBots sends each request's own User-Agent header with its lookup and
+// lets a crawler whose answer verifies it through, whatever BlockCondition
+// matches; Unlimited never answers a verdict.
 type Options struct {
 	middleware.Options[*gin.Context]
 
@@ -55,7 +59,7 @@ func New(options Options) (gin.HandlerFunc, error) {
 	}
 
 	return func(c *gin.Context) {
-		lookup, err := core.Evaluate(c.Request.Context(), c)
+		lookup, err := core.EvaluateAgent(c.Request.Context(), c, c.GetHeader("User-Agent"))
 		if err != nil {
 			onError(c, err)
 			return
