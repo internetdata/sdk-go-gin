@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.1.1 - 2026-11-26
+
+### Fixes
+
+- Require internetdata v2.18.1: a user agent refused on the AS and domain lookups ([`39ca3e1`](https://github.com/internetdata/sdk-go-gin/commit/39ca3e1d16d83ea416e42f00c1ce9dda6ada2e1b))
+
 ## 1.1.0 - 2026-11-25
 
 ### Features
