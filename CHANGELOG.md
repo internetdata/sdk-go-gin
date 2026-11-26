@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.1.2 - 2026-11-26
+
+### Features
+
+- Require internetdata v2.19.0: a keyless answer without the bot, carrier, satellite and service flags ([`e4ee0ad`](https://github.com/internetdata/sdk-go-gin/commit/e4ee0ad4326e6efd00d63109d79695131294889b))
+
 ## 1.1.1 - 2026-11-26
 
 ### Fixes
