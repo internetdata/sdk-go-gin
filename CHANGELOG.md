@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.1.4 - 2026-11-28
+
+### Fixes
+
+- Require internetdata v2.20.1: a cache TTL under 100ns is refused instead of crashing ([`c81c9f6`](https://github.com/internetdata/sdk-go-gin/commit/c81c9f63348da407573a3ec2c4bb9617858f581d))
+
 ## 1.1.3 - 2026-11-28
 
 ### Features
