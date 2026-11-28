@@ -2,6 +2,12 @@
 
 What each release changed for you, newest first. Each line is a commit's summary, linked to its full description and diff.
 
+## 1.1.3 - 2026-11-28
+
+### Features
+
+- Require internetdata v2.20.0: AllowBots sends only a crawler's User-Agent, at most four an address ([`c90d5c9`](https://github.com/internetdata/sdk-go-gin/commit/c90d5c93cb3e35cb74d7f3dd23e1d685637ff807))
+
 ## 1.1.2 - 2026-11-26
 
 ### Features
